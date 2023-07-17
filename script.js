@@ -5,53 +5,72 @@
 // }
 // console.log(square([1, 2, 3, 0, 4, 5, 6]))
 
-// const array = [1, 2, 3, 0, 4, 5, 6]
-// console.log(array.map((el) => el > 0))
 
-// const array = [1, 2, -3, 0, 4, -5, 6]
-// console.log(array < 0 ? true : false)
+// const yellow = (array) => {
+//   return array.map((el) => el > 0)
+// }
+// console.log(yellow([1, 2, 3, 0, 4, 5, 6]))
 
-// const array = [1, 2, -3, 0, 4, 5, -6]
-// console.log(array.filter((el) => el < 0))
 
-// const array = [1, 2, -3, 0, 4, 5, -6]
-// console.log(array.filter((el) => el % 2 === 0))
+// const yellow = (array) => {
+//     if (array < 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(yellow([1, 2, -3, 0, 4, -5, 6]))
 
-// const array = ['hello', 'sit', 'ipsum', 'javascript', 'python', 'sun', 'even']
-// console.log(array.filter((el) => el.length > 5))
 
-// const array = [1, 2, -3, 0, -4, 5, -6]
-// console.log(array)
-//
+// const yellow = (array) => {
+//   return array.filter((el) => el < 0)
+// }
+// console.log(yellow([1, 2, -3, 0, 4, 5, -6]))
 
-// let arr = [1, 2, -3, 0, -4, 5, -6]
-//     .reduce(
+
+// const yellow = (array) => {
+//   return array.filter((el) => el % 2 === 0)
+// }
+// console.log(yellow( [1, 2, -3, 0, 4, 5, -6]))
+
+
+// const yellow = (array) => {
+//   return array.filter((el) => el.length > 5)
+// }
+// console.log(yellow(['hello', 'sit', 'ipsum', 'javascript', 'python', 'sun', 'even']))
+
+
+// function yellowF(array) {
+//     return array.reduce(
 //     (a, c) => {
 //         if (c < 0) a[0] = a[0] + c;
 //         return a;
 //     },
-//     [0]
-// );
+//         [0])
+// }
 //
-// console.log(arr);
+// console.log(yellowF([1, 2, -3, 0, -4, 5, -6]))
 
 
-
-// const num = [1,2,3,4]
-// const array = ['a','b','c','d']
-// console.log(num.concat(array))
-
-
-// const num = [2, 3, 4, 5]
-// const str = 'hello world'
-// console.log(num.concat(str))
+// const yellow = (num,array) => {
+//   return [...num,...array]
+// }
+// console.log(yellow( [1,2,3,4],['a','b','c','d']))
 
 
-// const num = [2, 3, 4, 5]
-// const str = 'hello world'.split('')
-// console.log(num.concat(str))
+// const yellowF = (num , str) => {
+//   return [...num,...str.replace(' ', '')]
+// }
+// console.log(yellowF([2, 3, 4, 5],'hello world'))
 
 
-// const num = [2, 3, 4, 5]
-// const str = 'hello world'.split('')
-// console.log(num.concat(str).concat(num))
+// const yellowF = (num , str) => {
+//   return [...num,...str.split('  ')]
+// }
+// console.log(yellowF([2, 3, 4, 5],'hello world'))
+
+
+// const yellowF = (num , str) => {
+//   return [...num,...str.replace(' ', ''),...num]
+// }
+// console.log(yellowF([2, 3, 4, 5],'hello world'))
